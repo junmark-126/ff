@@ -87,7 +87,6 @@ jobs:
               --control-flow-flattening-threshold 1 \
               --identifier-names-generator hexadecimal \
               --rename-globals true \
-              --unicode-escape-sequence true \
               --transform-object-keys true 
            rm _worker.js
            log "代码混淆完成"

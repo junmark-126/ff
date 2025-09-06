@@ -81,14 +81,13 @@ jobs:
             npm install -g javascript-obfuscator
             # 对 _worker.js 进行混淆，输出为同名文件
             # javascript-obfuscator _worker.js --output _worker.js --compact true --control-flow-flattening true
-            javascript-obfuscator _worker.js --output 123.js \
+            javascript-obfuscator _worker.js --output _worker.js \
               --compact true \
               --control-flow-flattening true \
               --control-flow-flattening-threshold 1 \
               --identifier-names-generator hexadecimal \
               --rename-globals true \
               --transform-object-keys true 
-           rm _worker.js
            log "代码混淆完成"
           else
             log "警告: 未找到 _worker.js 文件，跳过混淆步骤"
